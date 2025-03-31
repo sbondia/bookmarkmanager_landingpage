@@ -1,0 +1,62 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+header{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+footer{
+    background-color: darkblue;
+    color: white;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+ul{
+    text-decoration: none;
+    display: inline-flex;
+}
+.button_nav{
+    border-style: hidden;
+    border-radius: 8px;
+    padding: 12px 28px;
+}
+.button_link{
+    background-color: blue;
+    color: white;
+    border-style: hidden;
+    border-radius: 8px;
+    padding: 12px 28px;
+}
+.button_slide{
+    border-style: hidden;
+    padding: 12px 28px;
+}
+.hidden{
+    display:none
+}
+.text_center{
+    text-align: center;
+}
+#button_login{
+    color:red;
+    border-color: red;
+}
+#contact{
+    background-color: blue;
+    color: white;
+}
+#logo_hamburger {display:none}
+@media only screen and (min-width: 600px) {
+    div{text-align: center;}
+    #logo_hamburger {display: block;}
+    #nav_list {display: none;}
+}
