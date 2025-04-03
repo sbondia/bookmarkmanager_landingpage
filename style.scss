@@ -1,0 +1,146 @@
+@mixin flexY ($direction:column, $content:space-evenly){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-content: center;
+}
+@mixin flexX ($direction:row, $content:space-evenly){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-content: center;
+}
+body{
+    @include flexY();
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    min-height: 100px;
+    padding: 0px 20px;
+}
+footer{
+    @include flexY();
+    background-color: darkblue;
+    color: white;
+    min-height: 300px;
+}
+section{
+    @include flexY();
+    padding:30px 5%;
+}
+div{
+    text-align: center;
+    align-content: center;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    margin: 10px;
+}
+.icon{
+    width: 24px;
+    height: 24px;
+    object-fit: none;
+}
+ul{
+    list-style-type: none;
+    display: inline-flex;
+    padding: 0px;
+}
+.hidden_mobile{
+    display: none;
+}
+.button_nav{
+    text-decoration: none;
+    border-style: solid 1px blue;
+    border-radius: 8px;
+    padding: 12px 28px;
+}
+.button_link{
+    background-color: blue;
+    color: white;
+    border-style: hidden;
+    border-radius: 8px;
+    padding: 12px 28px;
+}
+.button_slide{
+    border-style: hidden;
+    padding: 12px 28px;
+}
+.browser_box_border{
+    border-style: solid;
+    border-style: solid 1px black;
+    padding: 20px 0px;
+    margin: 20px 0px;
+}
+#browser_box{
+    padding: 0% 12%;
+}
+#features_ul{
+    flex-direction: column;
+}
+#nav_list_footer{
+    @include flexY();
+}
+#contact{
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    background-color: blue;
+    color: white;
+    min-height: 300px;
+    margin-bottom: 0px;
+}
+#contact_form{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 80px;
+}
+@media only screen and (min-width: 600px){
+    section{
+        padding: 0% 10%;
+    }
+    #simplebookmarkmanager{
+        @include flexX(row, row-reverse);
+    }
+    footer{
+        @include flexX(row, space-between); 
+        min-height: 100px;
+        padding: 0% 10%;
+    }
+    #footer1{
+        @include flexX(row, flex-start);   
+    }
+    #footer2{
+        @include flexX(row, flex-end);
+    }
+    #nav_list_footer{
+        flex-direction: row;
+    }
+    #browser_box{
+        padding: 0% 2%;
+    }
+    .browser_box_border{
+        padding: 20px 10px;
+        margin: 20px 20px;
+        min-width: 170px;
+    }
+    #logo_hamburguer{
+        display: none;
+    }
+    #nav_list{
+        display: block;
+    }
+    #contact_form{
+        flex-direction: row;
+    }
+    #features_ul{
+        flex-direction: row;
+    }
+    #browser_box{
+        @include flexX();
+    }
+}

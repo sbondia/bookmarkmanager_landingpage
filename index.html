@@ -23,7 +23,7 @@
             </ul>
         </nav>
     </header>
-    <section>
+    <section id="simplebookmarkmanager">
         <div>
             <img src="data/img/illustration-hero.svg" alt="illustration_hero">
         </div>
@@ -37,8 +37,8 @@
         </div>
 
     </section>
-    <section>
-        <div class="text_center" id="features">
+    <section id="features">
+        <div class="text_center">
             <h2>Features</h2>
             <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
         </div>
@@ -80,7 +80,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section id="download">
         <div>
             <h2>Download the extension</h2>
             <p>We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.</p>
@@ -158,27 +158,31 @@
         </div>
     </section>
     <section id="contact">
-        <p>35.000+ ALREADY JOINED</p>
-        <h2>Stay up-to-date with what we're doing</h2>
+        <div>
+            <p>35.000+ ALREADY JOINED</p>
+            <h2>Stay up-to-date with what we're doing</h2>
+        </div>
         <div id="contact_form">
             <input type="text" placeholder="Enter your email address" required>
             <button class="button_link" id="button_contact" type="submit">Contact Us</button>
         </div>
     </section>
     <footer>
-        <div>
-            <img src="data/img/logo-bookmark.svg" alt="logo_bookmark">
+        <div id="footer1">
+            <div>
+                <img src="data/img/logo-bookmark.svg" alt="logo_bookmark">
+            </div>
+            <div>
+                <ul id="nav_list_footer">
+                    <li><a class="button_nav" href="#features">FEATURES</a></li>
+                    <li><a class="button_nav" href="#pricing">PRICING</a></li>
+                    <li><a class="button_nav" href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
         </div>
-        <div>
-            <ul id="nav_list_footer">
-                <li><a class="button_nav" href="#features">FEATURES</a></li>
-                <li><a class="button_nav" href="#pricing">PRICING</a></li>
-                <li><a class="button_nav" href="#contact">CONTACT</a></li>
-            </ul>
-        </div>
-        <div>
-            <img src="data/img/icon-facebook.svg" alt="icon_facebook">
-            <img src="data/img/icon-twitter.svg" alt="icon_twitter">
+        <div id="footer2">
+            <img class="icon" src="data/img/icon-facebook.svg" alt="icon_facebook">
+            <img class="icon" src="data/img/icon-twitter.svg" alt="icon_twitter">
         </div>
     </footer>
 </body>

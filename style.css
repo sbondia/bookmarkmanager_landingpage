@@ -1,125 +1,180 @@
-body{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
 }
-header{
+
+header {
+  display: flex;
+  justify-content: space-between;
+  min-height: 100px;
+  padding: 0px 20px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+  background-color: darkblue;
+  color: white;
+  min-height: 300px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+  padding: 30px 5%;
+}
+
+div {
+  text-align: center;
+  align-content: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  -o-object-fit: none;
+     object-fit: none;
+}
+
+ul {
+  list-style-type: none;
+  display: inline-flex;
+  padding: 0px;
+}
+
+.hidden_mobile {
+  display: none;
+}
+
+.button_nav {
+  text-decoration: none;
+  border-style: solid 1px blue;
+  border-radius: 8px;
+  padding: 12px 28px;
+}
+
+.button_link {
+  background-color: blue;
+  color: white;
+  border-style: hidden;
+  border-radius: 8px;
+  padding: 12px 28px;
+}
+
+.button_slide {
+  border-style: hidden;
+  padding: 12px 28px;
+}
+
+.browser_box_border {
+  border-style: solid;
+  border-style: solid 1px black;
+  padding: 20px 0px;
+  margin: 20px 0px;
+}
+
+#browser_box {
+  padding: 0% 12%;
+}
+
+#features_ul {
+  flex-direction: column;
+}
+
+#nav_list_footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+#contact {
+  display: inline-flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
+  background-color: blue;
+  color: white;
+  min-height: 300px;
+  margin-bottom: 0px;
+}
+
+#contact_form {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 80px;
+}
+
+@media only screen and (min-width: 600px) {
+  section {
+    padding: 0% 10%;
+  }
+  #simplebookmarkmanager {
     display: flex;
+    flex-direction: row;
+    justify-content: row-reverse;
+    align-content: center;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-content: center;
     min-height: 100px;
-    padding: 0px 20px;
-}
-footer{
+    padding: 0% 10%;
+  }
+  #footer1 {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: darkblue;
-    color: white;
-    min-height: 300px;
-}
-section{
-    padding:30px 5%;
-}
-div{
-    text-align: center;
+    flex-direction: row;
+    justify-content: flex-start;
     align-content: center;
-}
-img{
-    max-width: 100%;
-    height: auto;
-}
-ul{
-    list-style-type: none;
-    display: inline-flex;
-    padding: 0px;
-}
-.flex_center{
+  }
+  #footer2 {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     align-content: center;
-    justify-content: center;
-    align-items: center;
-}
-.hidden_mobile{
+  }
+  #nav_list_footer {
+    flex-direction: row;
+  }
+  #browser_box {
+    padding: 0% 2%;
+  }
+  .browser_box_border {
+    padding: 20px 10px;
+    margin: 20px 20px;
+    min-width: 170px;
+  }
+  #logo_hamburguer {
     display: none;
-}
-.button_nav{
-    border-style: solid 1px blue;
-    border-radius: 8px;
-    padding: 12px 28px;
-}
-.button_link{
-    background-color: blue;
-    color: white;
-    border-style: hidden;
-    border-radius: 8px;
-    padding: 12px 28px;
-}
-.button_slide{
-    border-style: hidden;
-    padding: 12px 28px;
-}
-.browser_box_border{
-    border-style: solid;
-    border-style: solid 1px black;
-    padding: 20px 0px;
-    margin: 20px 0px;
-}
-#browser_box{
-    padding: 0% 12%;
-}
-#features_ul{
-    flex-direction: column;
-}
-#nav_list_footer{
-    flex-direction: column;
+  }
+  #nav_list {
+    display: block;
+  }
+  #contact_form {
+    flex-direction: row;
+  }
+  #features_ul {
+    flex-direction: row;
+  }
+  #browser_box {
+    display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
-}
-#contact{
-    display: inline-flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: space-evenly;
-    background-color: blue;
-    color: white;
-    min-height: 300px;
-    margin-bottom: 0px;
-}
-#contact_form{
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0px 80px;
-}
-@media only screen and (min-width: 600px){
-    section{
-        padding: 0% 10%;
-    }
-    footer{
-        flex-direction: row;
-        min-height: 100px;
-    }
-    .browser_box_border{
-        padding: 20px 10px;
-        margin: 20px 20px;
-    }
-    #nav_list_footer{
-        flex-direction: row;
-    }
-    #logo_hamburguer{
-        display: none;
-    }
-    #nav_list{
-        display: block;
-    }
-    #contact_form{
-        flex-direction: row;
-    }
-    #features_ul{
-        flex-direction: row;
-    }
-    #browser_box{
-        display: inline-flex;
-    }
-}
+    align-content: center;
+  }
+}/*# sourceMappingURL=style.css.map */
