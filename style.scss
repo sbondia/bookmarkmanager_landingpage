@@ -47,6 +47,7 @@ summary{
 div{
     text-align: center;
     align-content: center;
+    margin: 10px 0px;
 }
 img{
     max-width: 100%;
@@ -119,9 +120,12 @@ ul{
     }
     .textalign_left{
         text-align: left;
+        width: 500px;
     }
-    #simplebookmarkmanager{
+    .simplebookmarkmanager{
         @include flexX(row-reverse, center);
+        width: 80%;
+        align-items: center;
     }
     footer{
         @include flexX(row, space-between); 
@@ -153,10 +157,12 @@ ul{
     #nav_list{
         display: block;
         align-content: center;
-        
     }
     #contact_form{
         flex-direction: row;
+    }
+    #features{
+        align-items: center;
     }
     #features_ul{
         flex-direction: row;

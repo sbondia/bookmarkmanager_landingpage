@@ -53,6 +53,7 @@ summary div {
 div {
   text-align: center;
   align-content: center;
+  margin: 10px 0px;
 }
 
 img {
@@ -146,12 +147,15 @@ ul {
   }
   .textalign_left {
     text-align: left;
+    width: 500px;
   }
-  #simplebookmarkmanager {
+  .simplebookmarkmanager {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     align-content: center;
+    width: 80%;
+    align-items: center;
   }
   footer {
     display: flex;
@@ -195,6 +199,9 @@ ul {
   }
   #contact_form {
     flex-direction: row;
+  }
+  #features {
+    align-items: center;
   }
   #features_ul {
     flex-direction: row;
