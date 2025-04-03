@@ -1,7 +1,8 @@
 body {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-evenly;
+  align-content: center;
 }
 
 header {
@@ -15,7 +16,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
+  align-content: center;
   background-color: darkblue;
   color: white;
   min-height: 300px;
@@ -24,7 +25,8 @@ footer {
 section {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-evenly;
+  align-content: center;
   padding: 30px 5%;
 }
 
@@ -36,6 +38,14 @@ div {
 img {
   max-width: 100%;
   height: auto;
+  margin: 10px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  -o-object-fit: none;
+     object-fit: none;
 }
 
 ul {
@@ -44,18 +54,12 @@ ul {
   padding: 0px;
 }
 
-.flex_center {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-}
-
 .hidden_mobile {
   display: none;
 }
 
 .button_nav {
+  text-decoration: none;
   border-style: solid 1px blue;
   border-radius: 8px;
   padding: 12px 28px;
@@ -90,9 +94,10 @@ ul {
 }
 
 #nav_list_footer {
+  display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
+  align-content: center;
 }
 
 #contact {
@@ -117,16 +122,42 @@ ul {
   section {
     padding: 0% 10%;
   }
-  footer {
+  #simplebookmarkmanager {
+    display: flex;
     flex-direction: row;
+    justify-content: row-reverse;
+    align-content: center;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
     min-height: 100px;
+    padding: 0% 10%;
+  }
+  #footer1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+  }
+  #footer2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+  }
+  #nav_list_footer {
+    flex-direction: row;
+  }
+  #browser_box {
+    padding: 0% 2%;
   }
   .browser_box_border {
     padding: 20px 10px;
     margin: 20px 20px;
-  }
-  #nav_list_footer {
-    flex-direction: row;
+    min-width: 170px;
   }
   #logo_hamburguer {
     display: none;
@@ -141,6 +172,9 @@ ul {
     flex-direction: row;
   }
   #browser_box {
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
   }
 }/*# sourceMappingURL=style.css.map */
