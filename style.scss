@@ -1,3 +1,6 @@
+$azul_bookmark: #5266df;
+$azul_footer: #242946;
+$rojo_boton: #f55958;
 @mixin flexY ($direction:column, $content:space-evenly){
     display: flex;
     flex-direction: $direction;
@@ -12,26 +15,39 @@
 }
 body{
     @include flexY();
+    align-items: center;
 }
 header{
     display: flex;
     justify-content: space-between;
+    width: 100%;
     min-height: 100px;
-    padding: 0px 20px;
+    padding: 0px 30px;
 }
 footer{
     @include flexY();
-    background-color: darkblue;
+    background-color: $azul_footer;
     color: white;
+    width: 100%;
     min-height: 300px;
 }
 section{
     @include flexY();
     padding:30px 5%;
 }
+summary{
+    @include flexX(row-reverse, space-between);
+    div{
+        text-align: right;
+    }
+}
+#faq_details{
+    @include flexY();
+}
 div{
     text-align: center;
     align-content: center;
+    margin: 10px 0px;
 }
 img{
     max-width: 100%;
@@ -53,12 +69,12 @@ ul{
 }
 .button_nav{
     text-decoration: none;
-    border-style: solid 1px blue;
+    border-style: solid 1px $azul_bookmark;
     border-radius: 8px;
     padding: 12px 28px;
 }
 .button_link{
-    background-color: blue;
+    background-color: $azul_bookmark;
     color: white;
     border-style: hidden;
     border-radius: 8px;
@@ -84,12 +100,10 @@ ul{
     @include flexY();
 }
 #contact{
-    display: inline-flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: space-evenly;
-    background-color: blue;
+    @include flexY();
+    background-color: $azul_bookmark;
     color: white;
+    width: 100%;
     min-height: 300px;
     margin-bottom: 0px;
 }
@@ -101,10 +115,17 @@ ul{
 }
 @media only screen and (min-width: 600px){
     section{
+        margin: 20px 0px;
         padding: 0% 10%;
     }
-    #simplebookmarkmanager{
-        @include flexX(row, row-reverse);
+    .textalign_left{
+        text-align: left;
+        width: 500px;
+    }
+    .simplebookmarkmanager{
+        @include flexX(row-reverse, center);
+        width: 80%;
+        align-items: center;
     }
     footer{
         @include flexX(row, space-between); 
@@ -114,13 +135,11 @@ ul{
     #footer1{
         @include flexX(row, flex-start);   
     }
-    #footer2{
-        @include flexX(row, flex-end);
-    }
     #nav_list_footer{
         flex-direction: row;
     }
     #browser_box{
+        @include flexX();
         padding: 0% 2%;
     }
     .browser_box_border{
@@ -128,19 +147,28 @@ ul{
         margin: 20px 20px;
         min-width: 170px;
     }
+    .center500{
+        align-items: center;
+        width: 500px;
+    }
     #logo_hamburguer{
         display: none;
     }
     #nav_list{
         display: block;
+        align-content: center;
     }
     #contact_form{
         flex-direction: row;
     }
+    #features{
+        align-items: center;
+    }
     #features_ul{
         flex-direction: row;
     }
-    #browser_box{
-        @include flexX();
+    .div{
+        margin: 10px 0px;
     }
+
 }
