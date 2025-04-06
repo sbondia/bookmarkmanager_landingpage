@@ -64,6 +64,9 @@ ul{
     display: inline-flex;
     padding: 0px;
 }
+.bg-navMenu{
+    background-color: rgba(36, 41, 70, 0.9);
+}
 .hidden_mobile{
     display: none;
 }
@@ -151,6 +154,14 @@ ul{
         align-items: center;
         width: 500px;
     }
+    /*.fullscreen{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: auto;
+    }
+    */
     #logo_hamburguer{
         display: none;
     }
@@ -161,7 +172,8 @@ ul{
     #contact_form{
         flex-direction: row;
     }
-    #features{
+    .features{
+        @include flexX(row-reverse, center);
         align-items: center;
     }
     #features_ul{
