@@ -2,14 +2,14 @@
 function show_navMenu(show = false){
     navMenu.style.display = show ? 'block' : 'none'
 }
-function checkMediaQuery(query) {
+function checkMediaQuery(query){
     return window.matchMedia(query).matches;
   }
 function show_div(aux){
+    const MINWIDTH = 600
     features_bookmark.style.display = 'none'
     features_search.style.display = 'none'
     features_share.style.display = 'none'
-    // si pongo un "block" funciona en movil, para desktop necesito "flex"
-    // lo suyo seria un mediaquery en js para alternar
-    aux.style.display = 'block'
+    let isDesktop = checkMediaQuery(`(min-width: ${MINWIDTH}px)`)
+    aux.style.display = isDesktop ? 'flex' : 'block'
 }
