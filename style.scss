@@ -80,6 +80,7 @@ ul{
     background-color: $azul_bookmark;
     color: white;
     border-style: hidden;
+    box-shadow: 5px 5px 10px #e0e0eb;
     border-radius: 8px;
     padding: 12px 28px;
 }
@@ -88,8 +89,7 @@ ul{
     padding: 12px 28px;
 }
 .browser_box_border{
-    border-style: solid;
-    border-style: solid 1px black;
+    box-shadow: 5px 5px 10px #e0e0eb;
     padding: 20px 0px;
     margin: 20px 0px;
 }
@@ -152,7 +152,7 @@ ul{
     }
     .center500{
         align-items: center;
-        width: 500px;
+        //width: 500px;
     }
     /*
     .fullscreen{
